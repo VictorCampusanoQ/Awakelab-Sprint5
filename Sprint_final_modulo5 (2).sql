@@ -240,13 +240,13 @@ pero de todas las categorías asociadas a: produtos que se han vendido
 no logro enganchar a la categoria que más productos ha vendido*/
 update categorias 
 inner join productos on (productos.idcategoria_producto = categorias.id_categoria)
-set categorias.nombre_categoria = "Electrónica y computación"
+set categorias.nombre_categoria = "Electrónica y computación by Guillermo"
 where 
 	(select max(productos.idcategoria_producto) from productos where productos.idcategoria_producto = categorias.id_categoria );
 
 /* esta query hace lo mismo que el arriba */
 update categorias, productos
-set categorias.nombre_categoria = "Electrónica y computación"
+set categorias.nombre_categoria = "Electrónica y computación By Guillermo"
 where 
 	(select max(productos.idcategoria_producto) from productos where productos.idcategoria_producto = categorias.id_categoria );
     
