@@ -63,7 +63,7 @@ create table detalle_venta (
     foreign key (idventa_detalle) references ventas(id_venta)
     );
     
-/********** modificaciones a tablas **********/
+/********** modificadores de tablas **********/
 alter table proveedores modify column nombre_categoria varchar(30);
 alter table productos modify column inventario_producto int not null check (inventario_producto >= 0);
 alter table categorias modify column nombre_categoria varchar(30);
@@ -191,7 +191,7 @@ insert into detalle_venta value(9, 23, 3, 600000, 114000, 724000);
 select * from detalle_venta;
 
 
-/********** consultas a la base de datos *********
+/********** consultas a base de datos *********
 - Cuál es la categoría de productos que más se repite.
 - Cuáles son los productos con mayor stock
 - Qué color de producto es más común en nuestra tienda.
@@ -232,7 +232,7 @@ GROUP BY  proveedores.nombre_proveedor
 order by productos.inventario_producto asc ;
 
 
-/* Cambien la categoría de productos más popular por ‘Electrónica y computación’.*/
+/* Cambiar la categoría de productos más popular por ‘Electrónica y computación’.*/
 /*********************************************************************************/
 
 /* esta query hace lo mismo que el siguiente, cambian el nombre de la categoria, 
